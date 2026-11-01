@@ -2,34 +2,39 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Actor actor1 = new Actor("Сидни", "Суини", Gender.FEMALE, 163);
-        Actor actor2 = new Actor("Марк", "Эдельштейн", Gender.MALE, 175);
-        Actor actor3 = new Actor("Юра", "Борисов", Gender.MALE, 177);
+        
+        Actor actor1 = new Actor("Анна", "Нетребко", Gender.FEMALE, 168);
+        Actor actor2 = new Actor("Пласидо", "Доминго", Gender.MALE, 182);
+        Actor actor3 = new Actor("Рудольф", "Нуреев", Gender.MALE, 173);
 
-        Director director1 = new Director("Кристофер", "Нолан", Gender.MALE, 14);
-        Director director2 = new Director("Дени", "Вильнёв", Gender.MALE, 17);
+     
+        Director director1 = new Director("Константин", "Станиславский", Gender.MALE, 42);
+        Director director2 = new Director("Борис", "Покровский", Gender.MALE, 35);
 
-        Person musicAuthor = new Person("Ханс", "Циммер", Gender.MALE);
-        Person choreographer = new Person("Иржи", "Килиан", Gender.MALE);
+    
+        Person musicAuthor = new Person("Петр", "Чайковский", Gender.MALE);
+        Person choreographer = new Person("Мариус", "Петипа", Gender.MALE);
 
         Show drama = new Show("Сато",
                 150,
                 director2);
 
-        Opera opera = new Opera("Евгений Онегин",
-                175,
+       
+        Opera opera = new Opera("Пиковая дама",
+                180,
                 director1,
                 musicAuthor,
-                "Трагедия о несбывшейся любви и роковой ошибке, где чувства героев сталкиваются с" +
-                        " жёсткими правилами общества.",
-                20);
+                "Мистическая драма о всепоглощающей страсти к игре, роковом секрете трех карт " +
+                        "и трагической судьбе молодого инженера Германа.",
+                25);
 
-        Ballet ballet = new Ballet("Чайка",
-                120,
+   
+        Ballet ballet = new Ballet("Лебединое озеро",
+                140,
                 director1,
                 musicAuthor,
-                "Драма творческих амбиций и неразделённых чувств, где искусство и личная жизнь героев " +
-                        "неотделимы друг от друга.",
+                "Романтическая история о заколдованной принцессе Одетте, верности, предательстве " +
+                        "и великой силе любви, побеждающей злые чары.",
                 choreographer);
 
         drama.addActor(actor1);
@@ -54,14 +59,16 @@ public class Main {
         ballet.printActors();
         System.out.println();
 
+       
         System.out.println("Замена актёра в спектакле «" + drama.getTitle() + "».");
-        drama.replaceActor(actor3, "Суини");
+        drama.replaceActor(actor3, "Нетребко");
         System.out.println();
         drama.printActors();
         System.out.println();
 
+     
         System.out.println("Замена несуществующего актера в опере «" + opera.getTitle() + "».");
-        opera.replaceActor(actor1, "Камбербетч");
+        opera.replaceActor(actor1, "Шаляпин");
         System.out.println();
         opera.printActors();
         System.out.println();
